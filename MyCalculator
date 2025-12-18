@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+abstract class Calculator{
+	abstract void add();
+	abstract void sub();
+	abstract void mul();
+	abstract void div();
+}
+class MyCalci extends Calculator{
+	void add() {
+		int a=20;
+		int b=30;
+		int sum=a+b;
+		System.out.println("The Sum is :"+sum);
+	}
+	void sub() {
+		int a=20;
+		int b=30;
+		int sub=a-b;
+		System.out.println("The difference is :"+sub);
+	}
+	void mul() {
+		int a=20;
+		int b=30;
+		int mul=a*b;
+		System.out.println("The multiplication is :"+mul);
+	}
+	void div() {
+		int a=20;
+		int b=30;
+		int div=a/b;
+		System.out.println("The division is :"+div);
+	}
+}
+class MyCalci2 extends Calculator{
+	void add() {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 1st number:");
+		int a=s.nextInt();
+		System.out.println("Enter the 2nd number:");
+		int b=s.nextInt();
+		int sum=a+b;
+		System.out.println("The sum is :"+sum);
+	}
+	void sub() {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 1st number:");
+		int a=s.nextInt();
+		System.out.println("Enter the 2nd number:");
+		int b=s.nextInt();
+		int sub=a-b;
+		System.out.println("The difference is :"+sub);
+	}
+	void mul() {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 1st number:");
+		int a=s.nextInt();
+		System.out.println("Enter the 2nd number:");
+		int b=s.nextInt();
+		int mul=a*b;
+		System.out.println("The Multiplication is :"+mul);
+	}
+	void div() {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 1st number:");
+		int a=s.nextInt();
+		System.out.println("Enter the 2nd number:");
+		int b=s.nextInt();
+		int div=a/b;
+		System.out.println("The division is :"+div);
+	}
+}
+class Math{
+	void arithemetic() {
+		c.add();
+        c.sub();
+        c.mul();
+        c.div();
+	}
+}
+public class CalciAbstractionExmple 
+{
+	public static void main(String[] args)
+	{
+		MyCalci m1=new MyCalci();
+		MyCalci2 m2=new MyCalci2();
+		
+		Math m=new Math();
+		m.arithmetic(m1);
+		System.out.println("-----------------");
+		m.arithmetic(m2);
+	}
+}
