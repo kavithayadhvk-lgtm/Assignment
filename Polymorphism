@@ -1,0 +1,30 @@
+lass Airport{
+
+    void permit(plane ref)
+    {
+        ref.takeoff();
+        ref.fly();
+        ref.land();
+    }
+}
+public class MethodsOfInheritance {
+    public static void main(string[] args){
+        cargoplane cp=new cargoplane();
+        passengerplane pp=new passengerplane();
+        flighterplan fp=new flighterplane();
+
+        Airport a = new Airport();
+        a.permit(cp);
+        a.permit(pp);
+        a.permit(fp);
+        ref = cp;
+        ref.takeoff();
+        ref.fly();
+        ref.land();
+        ref = pp;
+        ref.takeoff();
+        ref.fly();
+        ref.land();
+        ((passengerplane)(ref)).carrypassengers();
+    }
+}
